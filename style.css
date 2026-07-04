@@ -1,0 +1,761 @@
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ---------- BODY ---------- */
+
+body{
+
+    font-family: 'Segoe UI', sans-serif;
+
+    background:linear-gradient(135deg,#000428,#004e92);
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* ---------- LOADING SCREEN ---------- */
+
+#loadingScreen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background:#000;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+#loadingScreen h2{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+#loadingText{
+
+    font-size:70px;
+
+    color:gold;
+
+}
+
+/* ---------- SECTIONS ---------- */
+
+section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+/* ---------- WELCOME PAGE ---------- */
+
+#welcomePage{
+
+    display:none;
+
+}
+
+#welcomePage h1{
+
+    font-size:60px;
+
+    color:gold;
+
+    text-shadow:0 0 15px gold;
+
+    margin-bottom:25px;
+
+}
+
+#welcomePage p{
+
+    font-size:24px;
+
+    margin-bottom:40px;
+
+}
+
+/* ---------- BUTTONS ---------- */
+
+button{
+
+    padding:16px 35px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:gold;
+
+    color:black;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:bold;
+
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 20px gold;
+
+}
+
+/* ---------- LETTER PAGES ---------- */
+
+.letterPage{
+
+    display:none;
+
+}
+
+.letterPage h2{
+
+    color:gold;
+
+    font-size:40px;
+
+    margin-bottom:25px;
+
+}
+
+.letterPage p{
+
+    width:80%;
+
+    max-width:900px;
+
+    background:rgba(255,255,255,.08);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(10px);
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    white-space:pre-line;
+
+    text-align:left;
+
+    box-shadow:0 0 20px rgba(255,255,255,.15);
+
+    margin-bottom:35px;
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+#welcomePage h1{
+
+font-size:40px;
+
+}
+
+#welcomePage p{
+
+font-size:18px;
+
+}
+
+.letterPage p{
+
+width:95%;
+
+font-size:18px;
+
+}
+
+button{
+
+font-size:18px;
+
+padding:14px 28px;
+
+}
+
+}
+/* ========================= */
+/*      MEMORY GALLERY       */
+/* ========================= */
+
+#gallery{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#000428,#004e92);
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+#gallery h1{
+
+    color:gold;
+
+    font-size:50px;
+
+    margin-bottom:30px;
+
+    text-shadow:0 0 15px gold;
+
+}
+
+/* Photo Frame */
+
+.photo-frame{
+
+    width:420px;
+
+    height:520px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:10px;
+
+    box-shadow:0 0 30px rgba(255,255,255,.5);
+
+    overflow:hidden;
+
+    transition:0.8s;
+
+}
+
+/* Photo */
+
+#galleryImage{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+/* Caption */
+
+#galleryCaption{
+
+    margin-top:25px;
+
+    font-size:24px;
+
+    color:white;
+
+    width:80%;
+
+    max-width:700px;
+
+    line-height:1.6;
+
+}
+
+/* Fade Animation */
+
+.fade{
+
+    animation:fade 1s;
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.photo-frame{
+
+width:280px;
+
+height:360px;
+
+}
+
+#gallery h1{
+
+font-size:32px;
+
+}
+
+#galleryCaption{
+
+font-size:18px;
+
+width:95%;
+
+}
+
+}
+/* ========================= */
+/*      VIDEO SECTION        */
+/* ========================= */
+
+#videoSection{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:black;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+#videoSection h1{
+
+    color:gold;
+
+    font-size:50px;
+
+    margin-bottom:30px;
+
+    text-shadow:0 0 20px gold;
+
+}
+
+#birthdayVideo{
+
+    width:80%;
+
+    max-width:900px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 30px rgba(255,215,0,.7);
+
+}
+
+@media(max-width:768px){
+
+#birthdayVideo{
+
+width:95%;
+
+}
+
+#videoSection h1{
+
+font-size:30px;
+
+}
+
+}
+/* ========================= */
+/*      FLOATING HEARTS      */
+/* ========================= */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-40px;
+
+    font-size:25px;
+
+    animation:floatHeart 7s linear forwards;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+}
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+/* ========================= */
+/*      COUNTDOWN            */
+/* ========================= */
+
+#countdownSection{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:black;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:99999;
+
+}
+
+#countdownTitle{
+
+    color:white;
+
+    font-size:40px;
+
+    margin-bottom:40px;
+
+    letter-spacing:2px;
+
+}
+
+#countdownNumber{
+
+    font-size:180px;
+
+    color:gold;
+
+    text-shadow:0 0 30px gold;
+
+}
+#countdownNumber{
+
+    animation:zoom 1s infinite;
+
+}
+
+@keyframes zoom{
+
+    0%{
+
+        transform:scale(0.8);
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+/* ===========================
+   EMOTIONAL MESSAGE
+=========================== */
+
+#emotionalSection{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:#000;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.messageBox{
+
+    width:80%;
+
+    max-width:850px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.messageBox h1{
+
+    color:gold;
+
+    font-size:50px;
+
+}
+
+.messageBox p{
+
+    margin-top:30px;
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    white-space:pre-line;
+
+}
+
+#continueBtn{
+
+    margin-top:40px;
+
+    padding:15px 35px;
+
+    font-size:20px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:gold;
+
+    cursor:pointer;
+
+}
+/* ===========================
+      BIRTHDAY CAKE
+=========================== */
+
+#cakeSection{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+#cakeSection h1{
+
+    font-size:55px;
+
+    color:white;
+
+}
+
+#cakeSection p{
+
+    font-size:24px;
+
+    color:white;
+
+}
+
+#cake{
+
+    font-size:150px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+#cake:hover{
+
+    transform:scale(1.2);
+
+}
+
+#birthdayWish{
+
+    display:none;
+
+    margin-top:30px;
+
+    color:white;
+
+    font-size:40px;
+
+}
+
+/* ===========================
+   THANK YOU SECTION
+=========================== */
+
+#thankYouSection{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:#111;
+
+    color:white;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+#thankYouSection h1{
+
+    font-size:60px;
+
+    color:gold;
+
+}
+
+#thankYouSection p{
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    max-width:800px;
+
+}
+
+#thankYouSection h2{
+
+    margin-top:30px;
+
+    color:#ff69b4;
+
+}
+
+#replayBtn{
+
+    margin-top:40px;
+
+    padding:15px 35px;
+
+    font-size:20px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    background:gold;
+
+}
