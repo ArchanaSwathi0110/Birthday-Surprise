@@ -146,16 +146,16 @@ document.getElementById("next3").onclick = function(){
 // =======================
 
 const photos = [
-    "images/photo1.jpeg",
-    "images/photo2.jpeg",
-    "images/photo3.jpeg",
-    "images/photo4.jpeg",
-    "images/photo5.jpeg",
-    "images/photo6.jpeg",
-    "images/photo7.jpeg",
-    "images/photo8.jpeg",
-    "images/photo9.jpeg",
-    "images/photo10.jpeg"
+    "photo1.jpeg",
+    "photo2.jpeg",
+    "photo3.jpeg",
+    "photo4.jpeg",
+    "photo5.jpeg",
+    "photo6.jpeg",
+    "photo7.jpeg",
+    "photo8.jpeg",
+    "photo9.jpeg",
+    "photo10.jpeg"
 ];
 const captions = [
 
